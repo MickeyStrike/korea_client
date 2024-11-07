@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import IconFlag from '@/assets/svg/iconFlag';
@@ -6,28 +6,28 @@ import Image from 'next/image';
 
 const profiles = [
   {
-    name: "Abhishek Gupta",
-    role: "마케팅",
-    experience: "5 years",
+    name: 'Abhishek Gupta',
+    role: '마케팅',
+    experience: '5 years',
     countryFlag: <IconFlag />,
-    skills: ["마케팅 콘텐츠 제작", "인스타그램 관리", "트위터 관리", "블로그 글 작성"],
-    image: "https://randomuser.me/api/portraits/men/1.jpg",
+    skills: ['마케팅 콘텐츠 제작', '인스타그램 관리', '트위터 관리', '블로그 글 작성'],
+    image: 'https://randomuser.me/api/portraits/men/1.jpg',
   },
   {
-    name: "Abhishek Gupta",
-    role: "마케팅",
-    experience: "3 years",
+    name: 'Abhishek Gupta',
+    role: '마케팅',
+    experience: '3 years',
     countryFlag: <IconFlag />,
-    skills: ["마케팅 콘텐츠 제작", "인스타그램 관리", "트위터 관리", "블로그 글 작성"],
-    image: "https://randomuser.me/api/portraits/women/1.jpg",
+    skills: ['마케팅 콘텐츠 제작', '인스타그램 관리', '트위터 관리', '블로그 글 작성'],
+    image: 'https://randomuser.me/api/portraits/women/1.jpg',
   },
   {
-    name: "Abhishek Gupta",
-    role: "마케팅",
-    experience: "4 years",
+    name: 'Abhishek Gupta',
+    role: '마케팅',
+    experience: '4 years',
     countryFlag: <IconFlag />,
-    skills: ["마케팅 콘텐츠 제작", "인스타그램 관리", "트위터 관리", "블로그 글 작성"],
-    image: "https://randomuser.me/api/portraits/women/2.jpg",
+    skills: ['마케팅 콘텐츠 제작', '인스타그램 관리', '트위터 관리', '블로그 글 작성'],
+    image: 'https://randomuser.me/api/portraits/women/2.jpg',
   },
 ];
 
@@ -51,19 +51,17 @@ const Carousel = () => {
             selected === index
               ? 'scale-100 opacity-100 z-10 translate-x-0'
               : selected === (index - 1 + profiles.length) % profiles.length
-              ? 'scale-90 opacity-70 z-0 -translate-x-1/3'
-              : selected === (index + 1) % profiles.length
-              ? 'scale-90 opacity-70 z-0 translate-x-1/3'
-              : 'scale-75 opacity-40 z-0 translate-x-0';
+                ? 'scale-90 opacity-70 z-0 -translate-x-1/3'
+                : selected === (index + 1) % profiles.length
+                  ? 'scale-90 opacity-70 z-0 translate-x-1/3'
+                  : 'scale-75 opacity-40 z-0 translate-x-0';
 
           return (
             <motion.div
               key={index}
-              className={`absolute transition-all ease-in-out cursor-pointer w-3/5 h-full transform ${positionClass}`}
-            >
+              className={`absolute transition-all ease-in-out cursor-pointer w-3/5 h-full transform ${positionClass}`}>
               <div
-                className={`w-[292px] h-[408px] bg-white rounded-xl shadow-lg p-6 px-9 text-center transform transition-all ease-in-out`}
-              >
+                className={`w-[292px] h-[408px] bg-white rounded-xl shadow-lg p-6 px-9 text-center transform transition-all ease-in-out`}>
                 <div className="relative w-24 h-24 mx-auto">
                   <Image
                     src={profile.image}
@@ -72,9 +70,7 @@ const Carousel = () => {
                     width={120}
                     height={120}
                   />
-                  <span className="absolute bottom-0 right-0">
-                    {profile.countryFlag}
-                  </span>
+                  <span className="absolute bottom-0 right-0">{profile.countryFlag}</span>
                 </div>
 
                 <h2 className="text-2xl font-black mt-4">{profile.name}</h2>
@@ -89,8 +85,7 @@ const Carousel = () => {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.5 }}
-                      className="inline-block text-[#5E626F] text-sm px-3 py-1 rounded-md border border-[#C1C5CF]"
-                    >
+                      className="inline-block text-[#5E626F] text-sm px-3 py-1 rounded-md border border-[#C1C5CF]">
                       {skill}
                     </motion.span>
                   ))}
@@ -106,18 +101,20 @@ const Carousel = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="absolute top-1/2 left-0 z-20 transform -translate-y-1/2 z-50"
-      >
-        <button onClick={handlePrev} className="text-white text-2xl">&lt;</button>
+        className="absolute top-1/2 left-0 z-20 transform -translate-y-1/2 z-50">
+        <button onClick={handlePrev} className="text-white text-2xl">
+          &lt;
+        </button>
       </motion.div>
 
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="absolute top-1/2 right-2 z-20 transform -translate-y-1/2 z-50"
-      >
-        <button onClick={handleNext} className="text-white text-2xl">&gt;</button>
+        className="absolute top-1/2 right-2 z-20 transform -translate-y-1/2 z-50">
+        <button onClick={handleNext} className="text-white text-2xl">
+          &gt;
+        </button>
       </motion.div>
     </div>
   );

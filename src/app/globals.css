@@ -7,7 +7,7 @@ body {
 }
 
 .bg-blue-custom {
-  background-image: url("/bg-blue.png");
+  background-image: url('/bg-blue.png');
 }
 
 /* global.css */
@@ -46,10 +46,9 @@ img {
   border-radius: 6px;
 }
 
-input[type="radio"]:checked ~ .cards label img {
+input[type='radio']:checked ~ .cards label img {
   box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
 }
-
 
 @layer utilities {
   .text-balance {
