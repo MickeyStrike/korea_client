@@ -5,7 +5,7 @@ import Button from './button';
 
 const Header = () => {
   return (
-    <div className="max-w-[1080px] w-full mx-auto flex justify-between pt-[13px] pb-[11px]">
+    <div className="max-w-[1080px] w-full mx-auto flex justify-between pt-[13px] pb-[11px] max-sm:px-4">
       <Logo />
       <div className="max-sm:hidden flex gap-[60px] items-center">
         <div className="flex gap-2 text-white items-center font-black">

@@ -45,7 +45,7 @@ const Carousel = () => {
   return (
     <div className="relative max-w-lg mx-auto mt-8 rounded-xl overflow-hidden z-10">
       {/* Image Container */}
-      <div className="relative h-[408px] flex justify-center items-center">
+      <div className="relative h-[408px] max-sm:h-[311px] flex justify-center items-center">
         {profiles.map((profile, index) => {
           const positionClass =
             selected === index
@@ -61,24 +61,31 @@ const Carousel = () => {
               key={index}
               className={`absolute transition-all ease-in-out cursor-pointer w-3/5 h-full transform ${positionClass}`}>
               <div
-                className={`w-[292px] h-[408px] bg-white rounded-xl shadow-lg p-6 px-9 text-center transform transition-all ease-in-out`}>
-                <div className="relative w-24 h-24 mx-auto">
+                className={`w-[292px] h-[408px] max-sm:w-[234px] max-sm:h-[311px] bg-white rounded-xl shadow-lg p-6 px-9 max-sm:py-9 max-sm:px-4 text-center transform transition-all ease-in-out`}>
+                <div className="relative w-24 h-24 max-sm:w-[69px] max-sm:h-[69px] mx-auto">
                   <Image
                     src={profile.image}
                     alt={`${profile.name}'s profile`}
-                    className="w-24 h-24 rounded-full object-cover border-4 border-white mx-auto"
+                    className="w-24 h-24 rounded-full object-cover border-4 border-white mx-auto max-sm:hidden"
                     width={120}
                     height={120}
+                  />
+                  <Image
+                    src={profile.image}
+                    alt={`${profile.name}'s profile`}
+                    className="w-[69px] h-[69px] rounded-full object-cover border-4 border-white mx-auto sm:hidden"
+                    width={69}
+                    height={69}
                   />
                   <span className="absolute bottom-0 right-0">{profile.countryFlag}</span>
                 </div>
 
-                <h2 className="text-2xl font-black mt-4">{profile.name}</h2>
-                <p className="text-[#4A77FF] mt-1 font-black">
+                <h2 className="text-2xl font-black mt-4 max-sm:text-base">{profile.name}</h2>
+                <p className="text-[#4A77FF] mt-1 font-black max-sm:text-sm">
                   {profile.role} · <span className="font-black">{profile.experience}</span>
                 </p>
 
-                <div className="mt-4 flex flex-wrap justify-center gap-[1px] gap-y-[4px] font-black w-[220px]">
+                <div className="mt-4 flex flex-wrap justify-center gap-[1px] gap-y-[4px] font-black max-w-[220px]">
                   {profile.skills.map((skill, skillIndex) => (
                     <motion.span
                       key={skillIndex}

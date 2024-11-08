@@ -16,6 +16,7 @@ import Header from '@/components/header';
 import Tooltip from '@/components/tooltip';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import IconCheck from '@/assets/svg/iconCheck';
 
 const listAdvantageCard = [
   {
@@ -91,8 +92,8 @@ export default function Home() {
     <>
       <section className="bg-blue-custom min-h-screen">
         <Header />
-        <div className="max-w-[1080px] w-full mx-auto flex flex-row max-sm:flex-col mt-[136px] items-center justify-center">
-          <div>
+        <div className="max-w-[1080px] w-full mx-auto flex flex-row max-sm:flex-col mt-[136px] max-sm:mt-[36px] sm:items-center justify-center max-sm:pb-[60px]">
+          <div className='max-sm:px-[16px]'>
             <div className="mt-[20px] w-full text-white text-5xl max-sm:text-3xl font-black">
               <motion.div
                 className="flex"
@@ -117,12 +118,12 @@ export default function Home() {
               {/* <p>외국인 인재를 찾고 계신가요?</p> */}
             </div>
             <motion.div
-              className="mt-[20px] w-full text-[#ffffffe6] text-2xl font-black"
+              className="mt-[20px] w-full text-[#ffffffe6] text-2xl max-sm:text-base w-[361px] max-sm:w-[328px] font-black"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}>
-              <p>법률 및 인사관리 부담없이</p>
-              <p>1주일 이내에 원격으로 채용해보세요.</p>
+              <p>법률 및 인사관리 부담없이 1주일 이내에 원격으로 채용해보세요.</p>
+              {/* <p></p> */}
             </motion.div>
             <div className="mt-[20px] w-full text-white text-lg font-black">
               <p className="underline">개발자가 필요하신가요?</p>
@@ -133,18 +134,41 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="w-full h-full">
+          <div className="w-full h-full max-sm:mt-[46px]">
             <Tooltip
               position="center"
               text="월 100만원"
               classNameText="!text-[#00C696] !bg-[#E9F7EF] !text-lg font-black flex gap-[10px]"
               classNameArrow="!bg-[#E9F7EF]"
-              classNameContainer="!mb-6 left-1/2 -translate-x-1/2"
+              classNameContainer="!mb-6 left-1/2 -translate-x-1/2 max-sm:!mb-4"
               withIcon={true}
               duration={0.5}
               delay={0}>
               <Carousel />
             </Tooltip>
+          </div>
+          <div className='flex flex-col sm:hidden pl-[16px] gap-2 mt-6'>
+            <div className='grid grid-cols-2 w-[243px]'>
+              <div className='font-black flex flex-row gap-3'>
+                <IconCheck />
+                <span className='text-white'>한국어 능력</span>
+              </div>
+              <div className='font-black flex flex-row gap-3 text-nowrap'>
+                <IconCheck />
+                <span className='text-white'>업무 수행 능력</span>
+              </div>
+            </div>
+            <div className='grid grid-cols-2 w-[243px]'>
+              <div className='font-black flex flex-row gap-3'>
+                <IconCheck />
+                <span className='text-white'>겸업 여부</span>
+              </div>
+              <div className='font-black flex flex-row gap-3'>
+                <IconCheck />
+                <span className='text-white'>평판 조회</span>
+              </div>
+            </div>
+            <p className='text-[#FBFF23] font-black underline mt-2'>개발자가 필요하신가요?</p>
           </div>
         </div>
         {/* <div className="w-full flex justify-center"> */}
@@ -156,8 +180,8 @@ export default function Home() {
         {/* </div> */}
       </section>
       <section className="bg-[#FBFBFB] w-full flex justify-center">
-        <div className="w-full mx-auto max-w-[980px] pt-24 max-sm:pt-16 max-sm:pt-4 pb-20 max-sm:pb-[60px]">
-          <div className="flex flex-row max-sm:flex-col justify-between w-full gap-[100px]">
+        <div className="w-full mx-auto max-w-[980px] pt-24 max-sm:pt-16 max-sm:pt-16 max-sm:px-4 pb-20 max-sm:pb-[60px]">
+          <div className="flex flex-row max-sm:flex-col justify-between w-full gap-[100px] max-sm:gap-[18px]">
             <div className="flex flex-col">
               <LogoFooter />
               <p className="mt-4 w-[247px] font-black text-sm">
@@ -166,14 +190,14 @@ export default function Home() {
               <p className="mt-[18px] text-[#5E626F] font-black">010-0000-0000</p>
               <p className="mt-2 text-[#5E626F] font-black">aaaaa@naver.com</p>
             </div>
-            <div className="flex flex-row max-sm:whitespace-wrap gap-[15px]">
+            <div className="grid grid-cols-4 max-sm:grid-cols-2 gap-[15px]">
               {listCardFooter.map((x) => (
                 <Card
                   key={x.title}
                   title={x.title}
                   iconSvg={x.iconSvg}
                   type="vertical"
-                  classNameCard="flex-start !w-[187px] h-[142px] !items-start !bg-white !gap-0"
+                  classNameCard="flex-start !w-[187px] h-[142px] max-sm:!w-[160px] max-sm:!h-[163px] !items-start !bg-white !gap-0"
                   classNameTitle="!text-[#343741] text-sm mt-3"
                   classNameContainerSvg="!bg-[#EFF1F6]"
                   withShortcut={true}
@@ -181,7 +205,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="flex flex-row max-sm:flex-col justify-between w-full gap-[50px] mt-11">
+          <div className="flex flex-row max-sm:flex-col justify-between w-full gap-[50px] max-sm:gap-[36px] mt-11">
             <div className="flex flex-col">
               <p className="font-black text-[#5E626F]">상호명</p>
               <p className="font-black text-[#5E626F]">하이퍼하이어</p>
