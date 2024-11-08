@@ -2,7 +2,7 @@ import HomePage from '@/components/page/home';
 
 const Home = async () => {
   try {
-    const res = await fetch('http://localhost:3000/get-data', {
+    const res = await fetch('https://korea-client.vercel.app/api/get-data', {
       cache: 'no-store', // Gunakan ini jika ingin memastikan data selalu diambil dari server setiap kali halaman dimuat
     });
 
