@@ -93,7 +93,7 @@ export default function Home() {
       <section className="bg-blue-custom min-h-screen">
         <Header />
         <div className="max-w-[1080px] w-full mx-auto flex flex-row max-sm:flex-col mt-[136px] max-sm:mt-[36px] sm:items-center justify-center max-sm:pb-[60px]">
-          <div className='max-sm:px-[16px]'>
+          <div className="max-sm:px-[16px]">
             <div className="mt-[20px] w-full text-white text-5xl max-sm:text-3xl font-black">
               <motion.div
                 className="flex"
@@ -147,28 +147,28 @@ export default function Home() {
               <Carousel />
             </Tooltip>
           </div>
-          <div className='flex flex-col sm:hidden pl-[16px] gap-2 mt-6'>
-            <div className='grid grid-cols-2 w-[243px]'>
-              <div className='font-black flex flex-row gap-3'>
+          <div className="flex flex-col sm:hidden pl-[16px] gap-2 mt-6">
+            <div className="grid grid-cols-2 w-[243px]">
+              <div className="font-black flex flex-row gap-3">
                 <IconCheck />
-                <span className='text-white'>한국어 능력</span>
+                <span className="text-white">한국어 능력</span>
               </div>
-              <div className='font-black flex flex-row gap-3 text-nowrap'>
+              <div className="font-black flex flex-row gap-3 text-nowrap">
                 <IconCheck />
-                <span className='text-white'>업무 수행 능력</span>
-              </div>
-            </div>
-            <div className='grid grid-cols-2 w-[243px]'>
-              <div className='font-black flex flex-row gap-3'>
-                <IconCheck />
-                <span className='text-white'>겸업 여부</span>
-              </div>
-              <div className='font-black flex flex-row gap-3'>
-                <IconCheck />
-                <span className='text-white'>평판 조회</span>
+                <span className="text-white">업무 수행 능력</span>
               </div>
             </div>
-            <p className='text-[#FBFF23] font-black underline mt-2'>개발자가 필요하신가요?</p>
+            <div className="grid grid-cols-2 w-[243px]">
+              <div className="font-black flex flex-row gap-3">
+                <IconCheck />
+                <span className="text-white">겸업 여부</span>
+              </div>
+              <div className="font-black flex flex-row gap-3">
+                <IconCheck />
+                <span className="text-white">평판 조회</span>
+              </div>
+            </div>
+            <p className="text-[#FBFF23] font-black underline mt-2">개발자가 필요하신가요?</p>
           </div>
         </div>
         {/* <div className="w-full flex justify-center"> */}
