@@ -197,24 +197,24 @@ const HomePage: FC<IHomePageProps> = ({ listAdvantageCard }) => {
           </div>
           <div className="flex flex-row max-sm:flex-col justify-between w-full gap-[50px] max-sm:gap-[36px] mt-11">
             <div className="flex flex-col">
-              <p className="font-black text-[#5E626F]">상호명</p>
-              <p className="font-black text-[#5E626F]">하이퍼하이어</p>
+              <p className="font-black text-[#5E626F] max-sm:text-xs">상호명</p>
+              <p className="font-black text-[#5E626F] max-sm:text-[13px]">하이퍼하이어</p>
               <p className="font-black text-[#343741] w-[212px] text-[13px]">Hyperhire India Private Limited</p>
             </div>
             <div className="flex flex-col">
-              <p className="font-black text-[#343741]">대표 CEO</p>
-              <p className="font-black text-[#5E626F]">김주현</p>
-              <p className="font-black text-[#5E626F] text-nowrap">Juhyun Kim</p>
+              <p className="font-black text-[#343741] max-sm:text-xs">대표 CEO</p>
+              <p className="font-black text-[#5E626F] max-sm:text-[13px]">김주현</p>
+              <p className="font-black text-[#5E626F] text-nowrap max-sm:text-[13px]">Juhyun Kim</p>
             </div>
             <div className="flex flex-col">
-              <p className="font-black text-[#343741]">사업자등록번호 CIN</p>
-              <p className="font-black text-[#5E626F]">427-86-01187</p>
-              <p className="font-black text-[#5E626F]">U74110DL2016PTC290812</p>
+              <p className="font-black text-[#343741] max-sm:text-xs">사업자등록번호 CIN</p>
+              <p className="font-black text-[#5E626F] max-sm:text-[13px]">427-86-01187</p>
+              <p className="font-black text-[#5E626F] max-sm:text-[13px]">U74110DL2016PTC290812</p>
             </div>
             <div className="flex flex-col">
-              <p className="font-black text-[#343741]">주소 ADDRESS</p>
-              <p className="font-black text-[#5E626F]">서울특별시 강남대로 479, 지하 1층 238호</p>
-              <p className="font-black text-[#5E626F] w-[455px] max-sm:w-[327px]">
+              <p className="font-black text-[#343741] max-sm:text-xs">주소 ADDRESS</p>
+              <p className="font-black text-[#5E626F] max-sm:text-[13px]">서울특별시 강남대로 479, 지하 1층 238호</p>
+              <p className="font-black text-[#5E626F] w-[455px] max-sm:w-[327px] max-sm:text-[13px]">
                 D-138, Street number 11, Jagjeet Nagar, North East Delhi, New Delhi, 110053 India
               </p>
             </div>
