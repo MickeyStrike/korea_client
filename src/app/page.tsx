@@ -1,10 +1,9 @@
 import HomePage from '@/components/page/home';
 
 const Home = async () => {
-
   try {
-    const res = await fetch("https://korea-client.vercel.app/get-data", {
-      cache: 'no-store' // Gunakan ini jika ingin memastikan data selalu diambil dari server setiap kali halaman dimuat
+    const res = await fetch('http://localhost:3000/get-data', {
+      cache: 'no-store', // Gunakan ini jika ingin memastikan data selalu diambil dari server setiap kali halaman dimuat
     });
 
     if (!res.ok) {
@@ -13,14 +12,11 @@ const Home = async () => {
     }
 
     const responseData = await res.json();
-    
-    return (
-      <HomePage listAdvantageCard={responseData.data} />
-    );
 
+    return <HomePage listAdvantageCard={responseData.data} />;
   } catch (error) {
-    console.error("Error fetching data:", error);
-    
+    console.error('Error fetching data:', error);
+
     // Anda bisa mengembalikan tampilan alternatif atau komponen error
     return (
       <div className="error-container">
@@ -29,6 +25,6 @@ const Home = async () => {
       </div>
     );
   }
-}
+};
 
-export default Home 
+export default Home;

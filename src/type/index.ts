@@ -1,4 +1,4 @@
 export interface ResponseGetData {
-  title: string,
-  description: string
+  title: string;
+  description: string;
 }

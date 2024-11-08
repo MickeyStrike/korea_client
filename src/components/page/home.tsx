@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import IconAvatar from '@/assets/svg/iconAvatar';
 import IconBox from '@/assets/svg/iconBox';
 import IconCall from '@/assets/svg/iconCall';
@@ -66,12 +66,10 @@ const listCardFooter = [
 ];
 
 interface IHomePageProps {
-  listAdvantageCard: ResponseGetData[]
+  listAdvantageCard: ResponseGetData[];
 }
 
-const HomePage:FC<IHomePageProps> = ({
-  listAdvantageCard
-}) => {
+const HomePage: FC<IHomePageProps> = ({ listAdvantageCard }) => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -228,6 +226,6 @@ const HomePage:FC<IHomePageProps> = ({
       </section>
     </>
   );
-}
+};
 
-export default HomePage
+export default HomePage;
